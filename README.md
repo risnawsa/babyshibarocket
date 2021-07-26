@@ -10,4 +10,4 @@ This is Baby Shiba Rocket Landing Page
         `` npm install -g gulp `` for global installed
         `` npm install gulp gulp-sass gulp-sourcemaps gulp-autoprefixer browser-sync del --save-dev``
 ## 5. Install all new dependencies package
-## 6. Run ``gulp build-css`` to generate sass file into css , ``gulp build-js`` to generate js file and ``gulp watch`` to watch all the changes sass and js files
+## 6. Run ``gulp build-css`` to generate sass file into css , ``gulp build-js`` to generate js file, ``gulp build-fonts`` to generate fonts file and ``gulp watch`` to watch all the changes sass and js files
