@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains all slick-slider vendor.
+// -----------------------------------------------------------------------------
+
+@import 'node_modules/slick-slider/slick/slick.scss';
+@import 'node_modules/slick-slider/slick/slick-theme.scss';
+
+@font-face {
+    font-family: slick;
+    src: url('../../../node_modules/slick-slider/slick/fonts/slick.ttf'),
+        url('../../../node_modules/slick-slider/slick/fonts/slick.woff');
+    font-display: swap;
+}

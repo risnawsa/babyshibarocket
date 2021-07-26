@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains all button styles.
+// -----------------------------------------------------------------------------
+
+.btn-banients {
+    padding: 25px 15px;
+    font-weight: 600;
+    transition: all .5s ease-in-out; 
+
+    &.--white {
+        background-color: white;
+        color: #000000 !important;
+        border: 1px solid #312f2f; 
+
+        @include on-event{
+            background-color: transparent;
+            color: #ffffff !important;
+            border: 1px solid #ffffff;
+        }
+    }
+
+    &.--black {
+        background-color: transparent;
+        color: #ffffff !important;
+        border: 1px solid #ffffff; 
+
+        @include on-event{
+            background-color: #ffffff;
+            color: #312f2f !important;
+        }
+    }
+} 
