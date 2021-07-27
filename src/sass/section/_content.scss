@@ -9,6 +9,7 @@ $circle-size: 40px;
 $bdrs-icon: 100%;
 
 .content-shiba{
+    overflow-y: hidden !important;
     .shiba-ft-ct{
         padding: 50px 0;
         .icon-shiba{
