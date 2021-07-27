@@ -2,44 +2,20 @@
 // This file contains all component styles.
 // -----------------------------------------------------------------------------
 
-.title-bn {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 1rem; 
-
-    @include respond-max(md-dekstop) {
-        font-size: 32px;
-    }
-
-    @include respond-max(sm-tablet) {
-        font-size: 26px;
-    }
-}
-  
-.title-sld {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: .5rem; 
+.grid_layouts{
+    display: grid;
+    align-items: center;
 }
 
-.content-title {
-    width: 600px;
+.bg-grey-shiba{
+    background-color: $grey;
+}
 
-    @include respond-max(md-dekstop) {
-        width: 480px;
-    }
+.bg-dark-shiba{
+    background-color: $dark;
+}
 
-    @include respond-max(lg-tablet) {
-        width: 100%;
-    }
-    
-    p{
-        padding-right: 2rem;
-
-        @include respond-max(lg-tablet) {
-            padding-right: 0;
-        }
-    }
+.container{
+    padding-right: 20px !important;
+    padding-left: 20px !important;
 }

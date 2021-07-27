@@ -2,31 +2,16 @@
 // This file contains all button styles.
 // -----------------------------------------------------------------------------
 
-.btn-banients {
-    padding: 25px 15px;
+.btn-shiba{
+    box-shadow: unset;
+    border: unset;
+    text-transform: capitalize;
+    letter-spacing: .05em !important;
+    font-family: "worksans_semibold", sans-serif !important;
     font-weight: 600;
-    transition: all .5s ease-in-out; 
-
-    &.--white {
-        background-color: white;
-        color: #000000 !important;
-        border: 1px solid #312f2f; 
-
-        @include on-event{
-            background-color: transparent;
-            color: #ffffff !important;
-            border: 1px solid #ffffff;
-        }
+    font-size: 16px;
+    padding: 5px 15px;
+    @include respond-max(sm-tablet) {
+        font-size: 14px;
     }
-
-    &.--black {
-        background-color: transparent;
-        color: #ffffff !important;
-        border: 1px solid #ffffff; 
-
-        @include on-event{
-            background-color: #ffffff;
-            color: #312f2f !important;
-        }
-    }
-} 
+}

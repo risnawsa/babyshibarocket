@@ -9,9 +9,10 @@ $black: #000000;
 $white: #ffffff;
 
 //main background
-$artisaimo: #002337;
-$flow-blue: #01628c;
-$french-enamei: #70a8c3;
+$orange: #fdbc3e;
+$yellow: #fcc350;
+$grey: #201e29;
+$dark: #1c1b23;
 
 //text color
 
@@ -20,7 +21,6 @@ $french-enamei: #70a8c3;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-//  ../../../dist/fe/assets/images/ic_arrow-right.png
     'lg-laptop': 1400px,
     'lg-dekstop': 1199px,
     'mid-md-dekstop': 992px,

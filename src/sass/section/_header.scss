@@ -2,9 +2,63 @@
 // This file contains all header styles.
 // -----------------------------------------------------------------------------
 
-.header-cover{
-    background: linear-gradient(180deg, rgba(0,35,55,1) 0%, rgba(1,98,140,1) 76%, rgba(112,168,195,1) 100%);
-    .rice-heads{
-        
+.header-shiba{
+    .navbar{
+        background-color: $orange;
+        padding: 15px 0;
+
+        .navbar-brand{
+            margin-bottom: -50px;
+            padding: 0;
+            img{
+                width: 100px;
+            }
+        }
+
+        .navbar-toggler{
+            .fa-times{
+                display: none;
+            }
+            .fa-bars{
+                color: $dark;
+            }
+
+            &[aria-expanded="true"]{
+                .fa-times{
+                    display: block;
+                }
+                .fa-bars{
+                    display: none;
+                }
+            }
+        }
+
+        .navbar-collapse{
+            @include respond-max(md-dekstop) {
+                margin-top: 60px;
+                border-top: 1px solid $black;
+                padding-top: 10px;
+            }
+            .navbar-nav{
+                .nav-item{
+                    padding: 10px 0;
+                    padding-right: 15px;
+                    &:last-child{
+                        padding-right: 0;
+                    }
+                    .nav-link{
+                        text-transform: capitalize;
+                        color: $black;
+                        font-weight: 600;
+                        padding: 0;
+                        font-size: 16px;
+                        font-family: "worksans_med",sans-serif !important;
+                        @include respond-max(sm-tablet) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

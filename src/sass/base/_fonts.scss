@@ -2,9 +2,23 @@
 // This file contains all @font-face declarations.
 // -----------------------------------------------------------------------------
 
-// @font-face {
-//     font-family: gilroy_reg;
-//     src: url('../../../dist/fe/assets/fonts/Gilroy/Gilroy-Regular.otf');
-//     font-style: normal;
-//     font-display: swap;
-// }
+@font-face {
+    font-family: worksans_reg;
+    src: url('../../../dist/assets/fonts/Work_Sans/WorkSans-Regular.ttf');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: worksans_med;
+    src: url('../../../dist/assets/fonts/Work_Sans/WorkSans-Medium.ttf');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: worksans_semibold;
+    src: url('../../../dist/assets/fonts/Work_Sans/WorkSans-SemiBold.ttf');
+    font-style: normal;
+    font-display: swap;
+}

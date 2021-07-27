@@ -2,6 +2,40 @@
 // This file contains all typography style.
 // -----------------------------------------------------------------------------
 
-.f-gilroy_reg {
-    font-family: "gilroy_reg", sans-serif !important;
+.f-worksans_reg {
+    font-family: "worksans_reg", sans-serif !important;
+}
+
+.f-worksans_med {
+    font-family: "worksans_med", sans-serif !important;
+}
+
+.f-worksans_semibold {
+    font-family: "worksans_semibold", sans-serif !important;
+    font-weight: 700;
+}
+
+.main-title{
+    text-transform: uppercase;
+    color: $orange;
+    font-size: 40px;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 0.08em !important;
+    font-family: "worksans_semibold", sans-serif !important;
+    font-weight: 700;
+    margin-bottom: 50px;
+    @include respond-max(md-dekstop) {
+        font-size: 36px;
+        line-height: 40px;
+        margin-bottom: 40px;
+    }
+    @include respond-max(sm-tablet) {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    @include respond-max(lg-mobile) {
+        font-size: 26px;
+        line-height: 30px;
+    }
 }

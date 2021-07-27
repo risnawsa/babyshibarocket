@@ -3,14 +3,18 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
+    minCss = require('gulp-minify-css'),
     del = require('del');
 
 // target source scss
 var input = {
     'sass': 
     [
-        'src/sass/main.scss',
-        'node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css'
+        'src/sass/main.scss'
+    ],
+    'vendor': 
+    [
+        'src/sass/vendor/main.scss'
     ],
     'js':
     [
@@ -19,6 +23,7 @@ var input = {
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
         'node_modules/jquery-migrate/dist/jquery-migrate.js',
         'node_modules/slick-slider/slick/slick.min.js',
+        'node_modules/aos/dist/aos.js',
     ],
     'fonts' :
     [
@@ -31,6 +36,7 @@ var input = {
 // output css
 var output = {
     'css': 'dist/fe/css',
+    'vendor': 'dist/fe/vendor',
     'js': 'dist/fe/js',
     'fonts':'dist/fe/webfonts'
 };
@@ -43,6 +49,7 @@ var output = {
 var prefixerOptions = {
     cascade: false
 };
+
 gulp.task('build-css', function () {
     return gulp.src(input.sass)
         .pipe(sass().on('error', sass.logError))
@@ -51,6 +58,20 @@ gulp.task('build-css', function () {
         .pipe(sass())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(output.css))
+        .pipe(minCss())
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
+gulp.task('build-vendor', function () {
+    return gulp.src(input.vendor)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.init())
+        .pipe(autoprefixer(prefixerOptions))
+        .pipe(sass())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(output.vendor))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -81,11 +102,13 @@ gulp.task('styles', () => {
         .pipe(gulp.dest(output.css));
 });
 
-
 // watch SCSS to CSS files
-gulp.task('watch', () => {
-    gulp.watch(input.sass, (done) => {
-        gulp.series(['clean', 'styles'])(done);
+gulp.task('watch', function() {
+    gulp.watch('src/sass/**/*.scss', (done) => {
+        gulp.series(['build-css'])(done);
+    });
+    gulp.watch('src/vendor/*.js', (done) => {
+        gulp.series(['build-js'])(done);
     });
 });
 

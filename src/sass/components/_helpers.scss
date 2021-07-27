@@ -2,6 +2,17 @@
 // This file contains all helpers styles.
 // -----------------------------------------------------------------------------
 
-.row {
-    margin: 0 -15px; 
+.bounce-rocket {
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+.bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: linear;
+}
+@keyframes bounce-1 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
 }
