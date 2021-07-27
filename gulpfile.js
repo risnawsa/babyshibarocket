@@ -27,9 +27,9 @@ var input = {
     ],
     'fonts' :
     [
-        'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2',
-        'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff',
-        'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf',
+        'node_modules/font-awesome/fonts/fontawesome-webfont.woff2',
+        'node_modules/font-awesome/fonts/fontawesome-webfont.woff',
+        'node_modules/font-awesome/fonts/fontawesome-webfont.ttf',
     ]
 };
 
@@ -38,7 +38,7 @@ var output = {
     'css': 'dist/fe/css',
     'vendor': 'dist/fe/vendor',
     'js': 'dist/fe/js',
-    'fonts':'dist/fe/webfonts'
+    'fonts':'dist/fe/fonts'
 };
 
 // gulp.task('default', ['styles', 'watch', 'clean']);
