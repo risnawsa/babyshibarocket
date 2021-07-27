@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains all modal styles.
+// -----------------------------------------------------------------------------
+
+.modal{
+    .modal-dialog{
+       .modal-content{
+            .modal-header{
+                background-color: $yellow;
+                .modal-title{
+                    text-transform: capitalize;
+                    font-size: 1.2rem;
+                    color: $dark;
+                    font-family: "worksans_bold", sans-serif !important;
+                }
+                .close{
+                    span{
+                        color: $dark;
+                    }
+                }
+            }
+            .modal-body{
+                p{
+                    margin-bottom: 0;
+                    color: $dark;
+                    text-align: justify;
+                    font-family: "worksans_semibold", sans-serif !important;
+                }
+            }
+       } 
+    }
+}
