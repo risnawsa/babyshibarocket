@@ -50,6 +50,7 @@ $bdrs-icon: 100%;
             top: 0;
             left: 50%;
             width: calc(100% - 40px);
+            min-height: 155px;
             .slider-nd-top{
                 .slick-list{
                     @include respond-max(lg-tablet) {
@@ -72,10 +73,18 @@ $bdrs-icon: 100%;
                                 @include respond-max(md-dekstop) {
                                     padding: 20px 15px;
                                 }
-                                img{
+                                .images-slider{
                                     width: 40px;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    height: 50px;
                                     margin: auto;
                                 }
+                                // img{
+                                //     width: 40px;
+                                //     margin: auto;
+                                // }
                                 h3{
                                     color: $black;
                                     text-transform: uppercase;
@@ -131,103 +140,117 @@ $bdrs-icon: 100%;
 
     .shiba-rd-ct{
         padding: 70px 0;
-        .slick-rd-shiba{
-            .slick-list{
-                @include respond-max(lg-tablet) {
-                    padding-right: 10%;
-                }
-                @include respond-max(sm-tablet) {
-                    padding-right: 20%;
-                }
-                .slick-track{
-                    .slick-slide{
-                        margin: 0 10px;
-                        .card-slider{
-                            background-color: $grey;
-                            border-radius: 5px;
-                            margin: 10px 0;
-                            text-align: center;
-                            box-shadow: 0 0 10px 2px rgb(8 7 12 / 51%);
-                            .top-ct-slider{
-                                padding: 30px 20px;
+        .secndslider{
+            min-height: 420px;
+            .slick-rd-shiba{
+                .slick-list{
+                    @include respond-max(lg-tablet) {
+                        padding-right: 10%;
+                    }
+                    @include respond-max(sm-tablet) {
+                        padding-right: 20%;
+                    }
+                    .slick-track{
+                        .slick-slide{
+                            margin: 0 10px;
+                            .card-slider{
                                 background-color: $grey;
-                                border-top-left-radius: 5px;
-                                border-top-right-radius: 5px;
-                                @include respond-max(md-dekstop) {
-                                    height: 180px;
-                                    display: grid;
-                                    align-items: center;
-                                }
-                                @include respond-max(lg-tablet) {
-                                    height: 100%;
-                                }
-                                img{
-                                    width: 55px;
-                                    margin: auto;
-                                }
-                                h3{
-                                    text-transform: capitalize;
-                                    color: $orange;
-                                    font-size: 16px;
-                                    margin-bottom: 0;
-                                    margin-top: 20px;
-                                    font-family: "worksans_semibold", sans-serif !important;
-                                    font-weight: 600;
-                                    letter-spacing: .05em !important;
-                                }
-                            }
-                            .bottom-ct-slider{
-                                padding: 30px 20px;
-                                background-color: $black;
-                                border-bottom-left-radius: 5px;
-                                border-bottom-right-radius: 5px;
-                                height: 220px;
-                                position: relative;
-                                @include respond-max(md-dekstop) {
-                                    height: 310px;
-                                }
-                                @include respond-max(lg-tablet) {
-                                    height: 100%;
-                                }
-                                .overlay-btm{
-                                    height: 100%;
-                                    width: 100%;
-                                    background-color: #17151d;
-                                    opacity: 0;
-                                    transition: opacity .5s linear;
-                                    position: absolute;
-                                    transform: translate(-50%, -50%);
-                                    top: 50%;
-                                    left: 50%;
-                                }
-                                p{
-                                    color: $white;
-                                }
-                                .vw-dtls{
-                                    position: absolute;
-                                    transform: translate(-50%, -50%);
-                                    top: 50%;
-                                    left: 50%;
-                                    button{
-                                        color: $black;
-                                        background-color: $yellow;
-                                        border-radius: 5px;
-                                        visibility: hidden;
-                                        opacity: 0;
-                                        transition: visibility 0s .5s, opacity .5s linear;
+                                border-radius: 5px;
+                                margin: 10px 0;
+                                text-align: center;
+                                box-shadow: 0 0 10px 2px rgb(8 7 12 / 51%);
+                                .top-ct-slider{
+                                    padding: 30px 20px;
+                                    background-color: $grey;
+                                    border-top-left-radius: 5px;
+                                    border-top-right-radius: 5px;
+                                    @include respond-max(md-dekstop) {
+                                        height: 180px;
+                                        display: grid;
+                                        align-items: center;
+                                    }
+                                    @include respond-max(lg-tablet) {
+                                        height: 100%;
+                                    }
+                                    .images-slider{
+                                        width: 55px;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        height: 70px;
+                                        margin: auto;
+                                    }
+                                    // img{
+                                    //     width: 55px;
+                                    //     margin: auto;
+                                    // }
+                                    h3{
+                                        text-transform: capitalize;
+                                        color: $orange;
+                                        font-size: 16px;
+                                        margin-bottom: 0;
+                                        margin-top: 20px;
+                                        font-family: "worksans_semibold", sans-serif !important;
+                                        font-weight: 600;
+                                        letter-spacing: .05em !important;
                                     }
                                 }
-                                        
-                                @include on-event{
+                                .bottom-ct-slider{
+                                    padding: 30px 20px;
+                                    background-color: $black;
+                                    border-bottom-left-radius: 5px;
+                                    border-bottom-right-radius: 5px;
+                                    height: 220px;
+                                    position: relative;
+                                    @include respond-max(lg-dekstop) {
+                                        height: 300px;
+                                    }
+                                    @include respond-max(md-dekstop) {
+                                        height: 400px;
+                                    }
+                                    @include respond-max(lg-tablet) {
+                                        height: 100%;
+                                    }
                                     .overlay-btm{
+                                        height: 100%;
+                                        width: 100%;
+                                        background-color: #17151d;
+                                        opacity: 0;
                                         transition: opacity .5s linear;
-                                        opacity: .85;
+                                        position: absolute;
+                                        transform: translate(-50%, -50%);
+                                        top: 50%;
+                                        left: 50%;
+                                    }
+                                    p{
+                                        color: $white;
                                     }
                                     .vw-dtls{
+                                        position: absolute;
+                                        transform: translate(-50%, -50%);
+                                        top: 50%;
+                                        left: 50%;
                                         button{
-                                            visibility: visible;
-                                            opacity: 1;
+                                            color: $black;
+                                            background-color: $yellow;
+                                            border-radius: 5px;
+                                            visibility: hidden;
+                                            opacity: 0;
+                                            transition: visibility 0s .5s, opacity .5s linear;
+                                        }
+                                    }
+                                            
+                                    @include on-event{
+                                        .overlay-btm{
                                             transition: opacity .5s linear;
+                                            opacity: .85;
+                                        }
+                                        .vw-dtls{
+                                            button{
+                                                visibility: visible;
+                                                opacity: 1;
+                                                transition: opacity .5s linear;
+                                            }
                                         }
                                     }
                                 }
@@ -376,10 +399,14 @@ $bdrs-icon: 100%;
                 display: block;
             }
             .icn-rocket{
-                img{
+                .img-icn-rocket{
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding-top: 100%;
                     width: 100%;
                     margin: auto;
-                }   
+                } 
                 @include respond-max(md-dekstop) {
                     display: none;
                 }
@@ -686,8 +713,12 @@ $bdrs-icon: 100%;
                 .team-card{
                     background-color: $white;
                     padding: 20px;
-                    img{
+                    .img-team-card{
                         width: 230px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        padding-top: 100%;
                         margin: auto;
                         display: block;
                         @include respond-max(lg-tablet) {
@@ -700,6 +731,20 @@ $bdrs-icon: 100%;
                             width: calc(100% - 40px);
                         }
                     }
+                    // img{
+                    //     width: 230px;
+                    //     margin: auto;
+                    //     display: block;
+                    //     @include respond-max(lg-tablet) {
+                    //         width: calc(100% - 40px);
+                    //     }
+                    //     @include respond-max(sm-tablet) {
+                    //         width: 180px;
+                    //     }
+                    //     @include respond-max(lg-mobile) {
+                    //         width: calc(100% - 40px);
+                    //     }
+                    // }
                 }
                 .desc-sec{
                     position: absolute;

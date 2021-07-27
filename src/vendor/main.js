@@ -74,6 +74,23 @@ $(document).ready(function() {
     /********************************/
     /*slick slider*/
     /********************************/
+    $('.slider-nd-top').on('init', function (slick) {
+        $('.top-ct-nd').removeClass('slider-lazy');
+    });
+
+    $('.slider-nd-top').on('lazyLoaded', function(event, slick, image, imageSource){
+        var img = new Image(),
+            src = imageSource,
+            ele = $(image).parent(),
+            parent = ele.parent();
+        image.remove();
+        img.onload = function() {
+            ele.css("background-image", "url('"+src+"')");
+            ele.addClass('loaded');
+        }
+        img.src = src;
+    });
+
     $('.slider-nd-top').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -102,6 +119,23 @@ $(document).ready(function() {
                 }
             }
         ]
+    });
+
+    $('.slick-rd-shiba').on('init', function (slick) {
+        $('.secndslider').removeClass('slider-lazy');
+    });
+
+    $('.slick-rd-shiba').on('lazyLoaded', function(event, slick, image, imageSource){
+        var img = new Image(),
+            src = imageSource,
+            ele = $(image).parent(),
+            parent = ele.parent();
+        image.remove();
+        img.onload = function() {
+            ele.css("background-image", "url('"+src+"')");
+            ele.addClass('loaded');
+        }
+        img.src = src;
     });
 
     $('.slick-rd-shiba').slick({
@@ -149,5 +183,5 @@ $(document).ready(function() {
             }
           }
         ]
-      });
+    });
 });

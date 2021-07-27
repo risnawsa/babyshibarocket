@@ -1,0 +1,99 @@
+// -----------------------------------------------------------------------------
+// This file contains all image lazy styles.
+// -----------------------------------------------------------------------------
+
+.img-lazy{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('../../../dist/assets/icons/hitamputih.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: block;
+    }
+    &.small-lazy{
+        &:after {
+            width: 40px !important;
+            height: 40px !important;
+            transform: translate(-50%, -50%) !important;
+            top: 50% !important;
+            left: 50% !important;
+        }
+    }
+    &.big-lazy{
+        &:after {
+            width: 150px !important;
+            height: 150px !important;
+            transform: translate(-50%, -50%) !important;
+            top: 50% !important;
+            left: 50% !important;
+        }
+    }
+    &.main-img-oz{
+        img{
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+        }
+    }
+    &.loaded{
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.slider-lazy{
+    position: relative;
+    &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('../../../dist/assets/icons/hitamputih.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: block;
+    }
+    &.small-lazy{
+        &:after {
+            width: 40px !important;
+            height: 40px !important;
+            transform: translate(-50%, -50%) !important;
+            top: 50% !important;
+            left: 50% !important;
+        }
+    }
+    &.big-lazy{
+        &:after {
+            width: 150px !important;
+            height: 150px !important;
+            transform: translate(-50%, -50%) !important;
+            top: 50% !important;
+            left: 50% !important;
+        }
+    }
+}
+
+.slider-temp{
+    visibility: hidden;
+
+    &.slick-initialized {
+        visibility: visible;
+    }
+}
