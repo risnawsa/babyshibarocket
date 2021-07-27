@@ -42,17 +42,16 @@
             .navbar-nav{
                 .nav-item{
                     padding: 10px 0;
-                    padding-right: 15px;
+                    padding-right: 35px;
                     &:last-child{
                         padding-right: 0;
                     }
                     .nav-link{
-                        text-transform: capitalize;
                         color: $black;
-                        font-weight: 600;
                         padding: 0;
                         font-size: 16px;
-                        font-family: "worksans_med",sans-serif !important;
+                        letter-spacing: 0.03em !important;
+                        font-family: "worksans_semibold",sans-serif !important;
                         @include respond-max(sm-tablet) {
                             font-size: 14px;
                         }

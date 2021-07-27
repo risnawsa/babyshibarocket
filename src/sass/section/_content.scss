@@ -20,15 +20,16 @@ $bdrs-icon: 100%;
             margin-top: 20px;
         }
         .title-shiba{
-            text-transform: uppercase;
+            text-transform: capitalize;
             color: $orange;
             font-weight: 700;
             text-align: center;
             line-height: 50px;
-            letter-spacing: .08em !important;
-            font-size: 45px;
+            letter-spacing: .05em !important;
+            font-size: 50px;
             margin-top: 10px;
-            font-family: "worksans_semibold",sans-serif !important;
+            margin-bottom: 20px;
+            font-family: "itim_reg", sans-serif !important;
             @include respond-max(md-dekstop) {
                 font-size: 30px;
                 line-height: 40px;
@@ -52,6 +53,7 @@ $bdrs-icon: 100%;
             left: 50%;
             width: calc(100% - 40px);
             min-height: 155px;
+            z-index: 1;
             .slider-nd-top{
                 .slick-list{
                     @include respond-max(lg-tablet) {
@@ -82,18 +84,12 @@ $bdrs-icon: 100%;
                                     height: 50px;
                                     margin: auto;
                                 }
-                                // img{
-                                //     width: 40px;
-                                //     margin: auto;
-                                // }
                                 h3{
                                     color: $black;
                                     text-transform: uppercase;
                                     font-size: 18px;
                                     margin-top: 20px;
-                                    font-family: "worksans_semibold", sans-serif !important;
-                                    font-weight: 800;
-                                    letter-spacing: .05em !important;
+                                    font-family: "worksans_extrabold", sans-serif !important;
                                     @include respond-max(md-dekstop) {
                                         font-size: 16px;
                                     }
@@ -115,14 +111,14 @@ $bdrs-icon: 100%;
             padding-top: 150px;
             padding-bottom: 80px;
             text-align: center;
+            z-index: 0;
+            position: relative;
             h3{
                 color: $orange;
                 text-transform: capitalize;
                 font-size: 36px;
                 line-height: 40px;
                 font-family: "worksans_semibold", sans-serif !important;
-                font-weight: 700;
-                letter-spacing: .05em !important;
                 @include respond-max(md-dekstop) {
                     font-size: 30px;
                 }
@@ -181,19 +177,20 @@ $bdrs-icon: 100%;
                                         height: 70px;
                                         margin: auto;
                                     }
-                                    // img{
-                                    //     width: 55px;
-                                    //     margin: auto;
-                                    // }
                                     h3{
                                         text-transform: capitalize;
                                         color: $orange;
-                                        font-size: 16px;
+                                        font-size: 20px;
                                         margin-bottom: 0;
+                                        letter-spacing: .03em !important;
                                         margin-top: 20px;
                                         font-family: "worksans_semibold", sans-serif !important;
-                                        font-weight: 600;
-                                        letter-spacing: .05em !important;
+                                        @include respond-max(md-dekstop) {
+                                            font-size: 18px;
+                                        }
+                                        @include respond-max(lg-tablet) {
+                                            font-size: 16px;
+                                        }
                                     }
                                 }
                                 .bottom-ct-slider{
@@ -271,7 +268,7 @@ $bdrs-icon: 100%;
                 .ct-card-ftt{
                     .ct-cards{
                         ul{
-                            padding-inline-start: 10px;
+                            padding-inline-start: 20px;
                         }
                     }
                 }
@@ -314,12 +311,14 @@ $bdrs-icon: 100%;
                         color: $white;
                         font-size: 60px;
                         line-height: 70px;
+                        font-family: "worksans_extrabold", sans-serif !important;
                     }
                     h2{
                         color: $orange;
                         font-size: 30px;
                         line-height: 40px;
                         text-transform: capitalize;
+                        font-family: "worksans_bold", sans-serif !important;
                     }
                     @include respond-max(md-dekstop) {
                         width: 100px;
@@ -572,12 +571,21 @@ $bdrs-icon: 100%;
                         padding: 40px;
                         height: $circle-size;
                         position: relative;
+                        cursor: pointer;
+                        transition: all .4s ease-in-out !important;
                 
                         h6 {
                             margin-bottom: 0;
                             font-size: 30px;
                             color: $orange;
                             line-height: 40px;
+                        }
+
+                        @include on-event{
+                            background: $orange;
+                            h6{
+                                color: $dark;
+                            }
                         }
                 
                         &:before {
@@ -732,26 +740,12 @@ $bdrs-icon: 100%;
                             width: calc(100% - 40px);
                         }
                     }
-                    // img{
-                    //     width: 230px;
-                    //     margin: auto;
-                    //     display: block;
-                    //     @include respond-max(lg-tablet) {
-                    //         width: calc(100% - 40px);
-                    //     }
-                    //     @include respond-max(sm-tablet) {
-                    //         width: 180px;
-                    //     }
-                    //     @include respond-max(lg-mobile) {
-                    //         width: calc(100% - 40px);
-                    //     }
-                    // }
                 }
                 .desc-sec{
                     position: absolute;
                     width: 100%;
                     bottom: 0;
-                    padding: 20px;
+                    padding: 15px 20px;
                     background-color: $yellow;
                     visibility: hidden;
                     opacity: 0;
@@ -759,12 +753,15 @@ $bdrs-icon: 100%;
                     h5{
                         text-transform: capitalize;
                         color: $dark;
-                        font-size: 20px;
+                        font-size: 18px;
                         text-align: center;
-                        line-height: 28px;
-                        letter-spacing: 0.08em !important;
+                        line-height: 22px;
+                        letter-spacing: 0.05em !important;
                         font-family: "worksans_semibold", sans-serif !important;
                         font-weight: 700;
+                        @include respond-max(sm-tablet) {
+                            font-size: 16px;
+                        }
                     }
                 }
                 @include on-event{

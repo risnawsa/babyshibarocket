@@ -22,3 +22,24 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: worksans_bold;
+    src: url('../../../dist/assets/fonts/Work_Sans/WorkSans-Bold.ttf');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: worksans_extrabold;
+    src: url('../../../dist/assets/fonts/Work_Sans/WorkSans-ExtraBold.ttf');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: itim_reg;
+    src: url('../../../dist/assets/fonts/Itim/Itim-Regular.ttf');
+    font-style: normal;
+    font-display: swap;
+}
