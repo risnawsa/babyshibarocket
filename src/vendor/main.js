@@ -10,10 +10,10 @@ $(document).ready(function() {
     var hgtHeader = $('#header-shiba').height();
     var content_ft = mxHght-hgtHeader;
     $('#shiba-ft-ct').css({
-        'height': content_ft,
+        'height': content_ft+30,
         'margin-top': hgtHeader
     });
-    var logobabyshiba = content_ft-230;
+    var logobabyshiba = content_ft-220;
     $('#logobabyshiba').css({
         'padding-top': logobabyshiba
     });
@@ -166,7 +166,7 @@ $(document).ready(function() {
         centerMode: true,
         centerPadding: '100px',
         slidesToShow: 1,
-        arrows: false,
+        arrows: true,
         dots: false,
         infinite: true,
         responsive: [
@@ -179,9 +179,29 @@ $(document).ready(function() {
           {
             breakpoint: 576,
             settings: {
-                centerPadding: '20px',
+                centerPadding: '0',
+                centerMode: false,
             }
           }
         ]
+    });
+
+    /********************************/
+    /*Global Clipboard Copy*/
+    /********************************/
+    function setToggle(id) {
+        $("#copyclip-cp"+id).slideDown();
+    }
+
+    function hideToggle(id) {
+        setTimeout(function() {
+            $('#copyclip-cp'+id).slideUp();
+        }, 1200);
+    }
+    
+    var clp = new ClipboardJS('#copy-contract');
+    clp.on('success', function(e) {
+        setToggle($(e.trigger).data('target'));
+        hideToggle($(e.trigger).data('target'));
     });
 });

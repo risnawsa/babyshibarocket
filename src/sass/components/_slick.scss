@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// This file contains all slick slider styles.
+// -----------------------------------------------------------------------------
+
+.slick-slider{
+    .slick-list{
+        .slick-track{
+            margin: 0 !important;
+        }
+    }
+    .slick-arrow {
+        border: unset !important;
+        border-radius: 50px !important;
+        color: $white;
+        z-index: 1 !important;
+        height: 30px !important;
+        width: 30px !important;
+        top: calc(50% + 26px);
+        background-color: transparent !important;
+
+        &::before{
+            font-weight: 900;
+            color: rgb(32 30 41) !important;
+            font-size: 24px;
+            opacity: 1;
+        }
+
+        &.slick-prev {
+            left: 30px;
+            @include respond-max(lg-tablet) {
+                left: 10px;
+            }
+            @include respond-max(sm-tablet) {
+                left: 30px;
+            }
+            @include respond-max(lg-mobile) {
+                left: 15px;
+            }
+        }
+
+        &.slick-next {
+            right: 30px;
+            @include respond-max(lg-tablet) {
+                right: 10px;
+            }
+            @include respond-max(sm-tablet) {
+                right: 30px;
+            }
+            @include respond-max(lg-mobile) {
+                right: 15px;
+            }
+        }
+
+        &.slick-disabled {
+            display: none !important;
+        }
+    }
+}
