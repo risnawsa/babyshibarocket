@@ -6,6 +6,7 @@
     .navbar{
         background-color: $orange;
         padding: 15px 0;
+        box-shadow: 0 0 10px 2px rgb(8 7 12 / 51%);
 
         .navbar-brand{
             margin-bottom: -50px;
@@ -50,10 +51,29 @@
                         color: $black;
                         padding: 0;
                         font-size: 16px;
+                        position: relative;
                         letter-spacing: 0.03em !important;
                         font-family: "worksans_semibold",sans-serif !important;
                         @include respond-max(sm-tablet) {
                             font-size: 14px;
+                        }
+                        @include on-event{
+                            color: $white !important;
+                            &::before{
+                                border: unset !important;
+                            }
+                        }
+                    }
+                    &.active{
+                        .nav-link{
+                            &::before{
+                                position: absolute;
+                                bottom: -5px;
+                                left: 0;
+                                width: 100%;
+                                content: "";
+                                border: 1px solid $dark;
+                            }
                         }
                     }
                 }

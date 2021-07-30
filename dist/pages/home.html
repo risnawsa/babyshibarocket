@@ -44,22 +44,22 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" id="btn-shiba-ft-ct">Home</a>
+                                <a class="nav-link" id="btn-shiba-ft-ct" data-target="#shiba-ft-ct">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="btn-feature-shiba">Feature</a>
+                                <a class="nav-link" id="btn-feature-shiba" data-target="#feature-shiba">Feature</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" id="btn-tokenomics-shiba">Tokenomics</a>
+                                <a class="nav-link" id="btn-tokenomics-shiba" data-target="#tokenomics-shiba">Tokenomics</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="btn-rocketmaps-shiba">RocketMap</a>
+                                <a class="nav-link" id="btn-rocketmaps-shiba" data-target="#rocketmaps-shiba">RocketMap</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" id="btn-htb-shiba">How to Buy</a>
+                                <a class="nav-link" id="btn-htb-shiba" data-target="#htb-shiba">How to Buy</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="btn-team-shibaa">The Team</a>
+                                <a class="nav-link" id="btn-team-shibaa" data-target="#team-shibaa">The Team</a>
                             </li>
                         </ul>
                     </div>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section-scroll shiba-nd-ct bg-grey-shiba" name="feature-shiba">
+            <div class="section-scroll shiba-nd-ct bg-grey-shiba" name="feature-shiba" id="feature-shiba">
                 <div class="container position-relative">
                     <div class="cntrct-ct-nd">
                         <div class="card-contract">
@@ -93,10 +93,10 @@
                             </div>
                             <div class="grid_layouts fld-cntrct">
                                 <div class="field-cntract">
-                                    <h6>0x2945b18c2f9c45e652de81fadf3260330c39cb93</h6>
+                                    <h6>0xe26df510e872174c00967e7936bbf93e33963f20</h6>
                                 </div>
                                 <div class="btn-cntr position-relative">
-                                    <button data-clipboard-text="0x2945b18c2f9c45e652de81fadf3260330c39cb93" type="button" id="copy-contract" data-target="kode-contract">copy code</button>
+                                    <button data-clipboard-text="0xe26df510e872174c00967e7936bbf93e33963f20" type="button" id="copy-contract" data-target="kode-contract">copy code</button>
                                     <div class="ct-tggle" id="copyclip-cpkode-contract" style="display: none">
                                         <div class="position-relative">
                                             <small class="small-fnt">Copied</small>
@@ -149,7 +149,9 @@
                         data-aos-easing="ease-in-out" data-aos="fade-up">
                         <h3>meet baby shiba rocket</h3>
                         <p>
-                            Baby Shiba Rocket is a new pup in the crypto world brought to you by a team of experienced crypto marketers, crypto developers and all around crypto enthusiasts. Baby Shiba Rocket is a Hyper Deflationary Coin that rewards hodlers with every transaction! It comes equipped with what we like to call, The Beast Buy Back! $BSHIBR will also be coming complete with its very own Rocket, over the coming days, weeks and months Baby Shiba Rocket will fly holders to the Moon, Mars and Beyond so don't miss out. 
+                            Baby Shiba Rocket is the newest pup in the crypto space, brought to you by a team of experienced crypto marketers, crypto developers and all around crypto enthusiasts. 
+                            Baby Shiba Rocket is a Hyper Deflationary Coin that rewards hodlers with every transaction! It comes equipped with what we like to call, The Beast! Our very own big, bad buy back function. 
+                            $BSHIBR also comes complete with its very own Rocket! So over the next coming days, weeks and months, sit tight as Baby Shiba Rocket takes us on a journey to the Moon, Mars and Beyond!
                         </p>
                     </div>
                 </div>
@@ -213,7 +215,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section-scroll shiba-fr-ct bg-grey-shiba" name="tokenomics-shiba">
+            <div class="section-scroll shiba-fr-ct bg-grey-shiba" name="tokenomics-shiba" id="tokenomics-shiba">
                 <div class="container">
                     <div class="card-ft">
                         <div class="ct-card-ftt">
@@ -233,7 +235,7 @@
                                                 INITIAL SUPPLY
                                             </p>
                                             <p>
-                                                1,000,000,000,000
+                                                1,000,000,000,000,000
                                             </p>
                                             <p>
                                                 100%
@@ -373,7 +375,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section-scroll shiba-fth-ct bg-dark-shiba" name="rocketmaps-shiba">
+            <div class="section-scroll shiba-fth-ct bg-dark-shiba" name="rocketmaps-shiba" id="rocketmaps-shiba">
                 <div class="container">
                     <h3 class="main-title">RocketMap</h3>
                     <div class="grid_layouts gr-fth-shb" data-aos="fade-up"
@@ -521,13 +523,13 @@
                     </div>
                 </div>
             </div>
-            <div class="section-scroll shiba-sxt-ct bg-grey-shiba" name="htb-shiba">
+            <div class="section-scroll shiba-sxt-ct bg-grey-shiba" name="htb-shiba" id="htb-shiba">
                 <div class="container">
                     <h3 class="main-title">How to Buy</h3>
                     <div class="timeline-how-to-buy">
                         <div class="timeline"> 
                             <div class="timeline__event animated fadeInUp delay-3s">
-                                <div class="timeline__event__icon ">
+                                <div class="timeline__event__icon add-animate" id="add-animate1">
                                     <h6 class="f-worksans_semibold">01</h6>
                                 </div>
                                 <div class="timeline__event__content" 
@@ -550,7 +552,7 @@
                                 </div>
                             </div>
                             <div class="timeline__event animated fadeInUp delay-2s">
-                                <div class="timeline__event__icon">
+                                <div class="timeline__event__icon add-animate" id="add-animate2">
                                     <h6 class="f-worksans_semibold">02</h6>
                                 </div>
                                 <div class="timeline__event__content" 
@@ -570,7 +572,7 @@
                                 </div>
                             </div>
                             <div class="timeline__event animated fadeInUp delay-1s">
-                                <div class="timeline__event__icon">
+                                <div class="timeline__event__icon add-animate" id="add-animate3">
                                     <h6 class="f-worksans_semibold">03</h6>
                                 </div>
                                 <div class="timeline__event__content" 
@@ -596,7 +598,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section-scroll shiba-svn-ct bg-dark-shiba" name="team-shibaa">
+            <div class="section-scroll shiba-svn-ct bg-dark-shiba" name="team-shibaa" id="team-shibaa">
                 <div class="container">
                     <h3 class="main-title">The Team</h3>
                     <div class="grid_layouts team-card-sections">
@@ -655,10 +657,11 @@
                     </div>
                     <div class="modal-body">
                         <p>
-                            The Beast is our own version of the Kraken/AutoBoost function built directly into our contract. Some of you may be familiar with other buy back tokens, but with The Beast Baby Shiba Rocket is not just another buy back token.
+                            The Beast is the greatest protector in the land. Its job as our buyback function is to protect all Baby Shiba Rocket holders and ensure a healthy looking chart. 
                             <br>
+                            A 6% tax on every transaction is collected by our contract “The Beast” and it’s strategically used to buy back and burn tokens at crucial points along the chart. This instantly increases the price of Baby Shiba Rocket, and has the power to reverse negative chart trends. 
                             <br>
-                            A 6% tax is applied on all transactions, then our function enables us to choose when to deploy the buybacks based on trading volumes which enables us to do variable buybacks in order to maintain price increase and stability. Once released, The Beast will buy back tokens every time a sale occurs ensuring that dips are eaten, paper hands are left out in the cold and that hodlers are rewarded with with both redistribution rewards as well as continuous price growth.
+                            Not only does The Beast protect holders from chart killing massive dumps, but it provides insurance by acting as a safeguard against extreme market crashes. All holders have to do, is enjoy redistribution rewards and smile at the paper hands as we take Baby Shiba Rocket to the moon.
                         </p>
                     </div>
                 </div>

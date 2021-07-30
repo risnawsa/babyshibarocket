@@ -30,6 +30,18 @@ $(document).ready(function() {
         });
     }
 
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        $('#add-animate1').attr({
+            'data-aos': 'fade-right'
+        });
+        $('#add-animate2').attr({
+            'data-aos': 'fade-left'
+        });
+        $('#add-animate3').attr({
+            'data-aos': 'fade-right'
+        });
+    }
+
     if (window.matchMedia('(max-width: 991px) and (max-height: 450px)').matches) {
         var mainlogo = $('#mainlogo').height();
         var totalhgmobile = mxHght - (mainlogo+50);
@@ -38,9 +50,9 @@ $(document).ready(function() {
             'overflow-y': 'auto'
         });
     }
-
+    
     /********************************/
-    /*scroll page*/
+    /*One Scroll Page*/
     /********************************/
     function scrollToAnchor(aid){
         var aTag = $(".section-scroll[name='"+ aid +"']");
@@ -49,26 +61,70 @@ $(document).ready(function() {
         ,'slow');
     }
 
+    function addClassOnScroll () {
+        var windowTop = $(window).scrollTop();
+        $('.section-scroll[id]').each(function (index, elem) {
+            var offsetTop = $(elem).offset().top;
+            var outerHeight = $(this).outerHeight(true);
+    
+            if( windowTop > (offsetTop - 100) && windowTop < ( offsetTop + outerHeight)) {
+                var elemId = $(elem).attr('id');
+                $(".nav-link").parent().siblings().removeClass('active');
+                $(".nav-link[data-target='#" + elemId + "']").parent().addClass('active');
+            }
+        });
+    };
+
     $('#btn-shiba-ft-ct').click(function() {
         scrollToAnchor('shiba-ft-ct');
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
     });
+    $('#btn-shiba-ft-ct').on('click', addClassOnScroll);
+    if($('#btn-shiba-ft-ct').parent().hasClass('active')){
+        $('#btn-shiba-ft-ct').parent().siblings().removeClass('active');
+    }
+
     $("#btn-feature-shiba").click(function() {
         var aTag = $(".section-scroll[name=feature-shiba]");
         $('html,body').animate(
             { scrollTop: aTag.offset().top+20 }
         ,'slow');
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
     });
+    $('#btn-feature-shiba').on('click', addClassOnScroll);
+
     $('#btn-tokenomics-shiba').click(function() {
         scrollToAnchor('tokenomics-shiba');
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
     });
+    $('#btn-tokenomics-shiba').on('click', addClassOnScroll);
+    
     $("#btn-rocketmaps-shiba").click(function() {
         scrollToAnchor('rocketmaps-shiba');
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
     });
+    $('#btn-rocketmaps-shiba').on('click', addClassOnScroll);
+    
     $('#btn-htb-shiba').click(function() {
         scrollToAnchor('htb-shiba');
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
     });
+    $('#btn-htb-shiba').on('click', addClassOnScroll);
+    
     $("#btn-team-shibaa").click(function() {
         scrollToAnchor('team-shibaa');
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+    });
+    $('#btn-team-shibaa').on('click', addClassOnScroll);
+    
+    $(window).on('scroll', function () {
+        addClassOnScroll();
     });
 
     /********************************/
