@@ -363,6 +363,7 @@ $bdrs-icon: 100%;
                     display: inline;
                     .number-card{
                         float: right;
+                        width: 200px;
                     }
                     @include respond-max(lg-tablet) {
                         display: block;
@@ -371,8 +372,20 @@ $bdrs-icon: 100%;
                         }
                     }
                     .ct-cards{
+                        width: calc(100% - 280px);
                         ul{
                             padding-inline-start: 0;
+                        }
+                    }
+                    
+                    @include respond-max(lg-tablet) {
+                        display: block;
+                        .number-card{
+                            width: 100%;
+                            float: unset;
+                        }
+                        .ct-cards{
+                            width: 100%;
                         }
                     }
                 }
@@ -456,7 +469,12 @@ $bdrs-icon: 100%;
                         grid-gap: 20px;
                         align-items: flex-start;
                         @include respond-max(md-dekstop) {
-                            grid-template-columns: minmax(1px, 1fr) minmax(1px, 1fr) minmax(1px, 100px);
+                            grid-template-columns: minmax(1px, 1fr) minmax(1px, 1fr) minmax(1px, 70px);
+                            grid-gap: 15px;
+                        }
+                        @include respond-max(lg-tablet) {
+                            grid-template-columns: minmax(1px, 1fr) minmax(1px, 1fr) minmax(1px, 60px);
+                            grid-gap: 10px;
                         }
                         p{
                             text-align: right;
